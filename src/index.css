@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+  --color-background: oklch(1 0 0);
+  --color-background-dark: oklch(0.2 0 0);
+  --color-text: oklch(0.2 0 0);
+  --color-text-dark: oklch(1 0 0);
+  --color-primary: oklch(0.7 0.2 250);
+  --color-primary-dark: oklch(0.8 0.2 250);
+  --spacing: 0.25rem;
+}
+
+html {
+  font-family: var(--font-space-grotesk);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-dark);
+  }
+}
+
+.space-grotesk-light {
+  font-family: var(--font-space-grotesk);
+  font-weight: 300;
+}
+
+.space-grotesk-regular {
+  font-family: var(--font-space-grotesk);
+  font-weight: 400;
+}
+
+.space-grotesk-medium {
+  font-family: var(--font-space-grotesk);
+  font-weight: 500;
+}
+
+.space-grotesk-semibold {
+  font-family: var(--font-space-grotesk);
+  font-weight: 600;
+}
+
+.space-grotesk-bold {
+  font-family: var(--font-space-grotesk);
+  font-weight: 700;
+}
+
+.container {
+  margin-inline: auto;
+  padding-inline: calc(var(--spacing) * 4);
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: calc(var(--spacing) * 8);
+    max-width: 80rem;
+  }
+}
+
+.section {
+  padding-block: calc(var(--spacing) * 16);
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding-block: calc(var(--spacing) * 24);
+  }
+}
