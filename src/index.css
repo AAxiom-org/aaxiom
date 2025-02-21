@@ -9,17 +9,20 @@
   --color-primary: oklch(0.7 0.2 250);
   --color-primary-dark: oklch(0.8 0.2 250);
   --spacing: 0.25rem;
+  --ease-snappy: cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 html {
   font-family: var(--font-space-grotesk);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-text);
+  line-height: 1.5;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -57,6 +60,7 @@ body {
 .container {
   margin-inline: auto;
   padding-inline: calc(var(--spacing) * 4);
+  width: 100%;
 }
 
 @media (min-width: 640px) {
@@ -80,4 +84,65 @@ body {
   .section {
     padding-block: calc(var(--spacing) * 24);
   }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s var(--ease-snappy) forwards;
+}
+
+/* Transitions */
+.transition-all {
+  transition: all 0.3s var(--ease-snappy);
+}
+
+/* Card Hover Effects */
+.hover\:shadow-xl:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.hover\:-translate-y-1:hover {
+  transform: translateY(-4px);
+}
+
+/* Button Styles */
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+/* Focus States */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Video Container */
+.aspect-video {
+  aspect-ratio: 16 / 9;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #000;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.aspect-video iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
