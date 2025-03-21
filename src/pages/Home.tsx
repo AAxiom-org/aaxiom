@@ -8,6 +8,7 @@ interface Project {
   githubLink: string | null;
   demoLink: string | null;
   tags: string[];
+  logo?: string;
 }
 
 export default function HomePage() {
@@ -72,7 +73,16 @@ export default function HomePage() {
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {projects?.map((project) => (
                 <div key={project.id} className="bg-white dark:bg-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <h3 className="space-grotesk-semibold text-2xl mb-4">{project.title}</h3>
+                  <div className="flex items-center gap-4 mb-4">
+                    {project.logo && (
+                      <img 
+                        src={project.logo} 
+                        alt={`${project.title} logo`} 
+                        className="w-12 h-auto rounded-lg"
+                      />
+                    )}
+                    <h3 className="space-grotesk-semibold text-2xl">{project.title}</h3>
+                  </div>
                   {project.demoLink && (
                     <div className="mb-6 rounded-lg overflow-hidden aspect-video">
                       <iframe
