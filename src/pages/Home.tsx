@@ -30,14 +30,14 @@ export default function HomePage() {
           <div className="flex flex-col items-center text-center gap-8">
             <div className="w-48 md:w-64 lg:w-72 animate-fade-in relative">
               <img
-                src="/AAXIOM-02.png"
+                src="/aaxiom.png"
                 alt="AAXIOM"
                 className="w-full h-auto absolute inset-0 dark:opacity-0 transition-opacity duration-300"
                 width={288}
                 height={288}
               />
               <img
-                src="/AAXIOM-01.png"
+                src="/aaxiom-dark.png"
                 alt="AAXIOM"
                 className="w-full h-auto opacity-0 dark:opacity-100 transition-opacity duration-300"
                 width={288}
