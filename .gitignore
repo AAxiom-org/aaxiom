@@ -26,6 +26,7 @@ dist-ssr
 *.sw?
 .cursorrules
 .cursorignore
+.cursor/
 
 # Environment variables
 .env
