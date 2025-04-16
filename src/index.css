@@ -146,3 +146,23 @@ body {
   height: 100%;
   display: block;
 }
+
+/* Gradient Classes */
+.gradient-blue-purple {
+  background-image: linear-gradient(to right, var(--color-primary), oklch(0.7 0.2 290));
+}
+
+@media (prefers-color-scheme: dark) {
+  .gradient-blue-purple {
+    background-image: linear-gradient(to right, var(--color-primary-dark), oklch(0.8 0.2 290));
+  }
+}
+
+.gradient-blue-purple-hover {
+  background-image: linear-gradient(to right, var(--color-primary), oklch(0.7 0.2 290));
+  transition: all 0.3s var(--ease-snappy);
+}
+
+.gradient-blue-purple-hover:hover {
+  background-image: linear-gradient(to right, oklch(0.65 0.2 250), oklch(0.65 0.2 290));
+}

@@ -24,7 +24,7 @@ const GitHubCard = () => {
         rel="noopener noreferrer"
         className="block"
       >
-        <div className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+        <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
           {/* Header with repo info */}
           <div className="p-5">
             <div className="flex items-center space-x-3">
@@ -34,17 +34,17 @@ const GitHubCard = () => {
                 className="h-10 w-10 rounded-full"
               />
               <div>
-                <h2 className="font-medium text-gray-900 dark:text-white">
+                <h2 className="font-medium">
                   {repoData.name}
                 </h2>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                <p className="text-xs mt-0.5">
                   {repoData.owner.login}
                 </p>
               </div>
             </div>
             
             {repoData.description && (
-              <p className="text-sm text-gray-600 dark:text-gray-300 mt-3 line-clamp-2">
+              <p className="text-sm mt-3 line-clamp-2">
                 {repoData.description}
               </p>
             )}
@@ -52,13 +52,12 @@ const GitHubCard = () => {
           
           {/* Language */}
           {repoData.language && (
-            <div className="px-5 py-3 border-t border-gray-100 dark:border-gray-800">
-              <div className="flex items-center text-sm text-gray-600 dark:text-gray-300">
-                <Code className="mr-1.5 h-4 w-4 text-gray-400" />
+            <div className="px-5 py-3 border-t border-current/10">
+              <div className="flex items-center text-sm">
+                <Code className="mr-1.5 h-4 w-4" />
                 <div className="flex items-center">
                   <span 
-                    className="h-2.5 w-2.5 rounded-full mr-1.5"
-                    style={{ backgroundColor: repoData.languageColor }} 
+                    className="h-2.5 w-2.5 rounded-full mr-1.5 gradient-blue-purple"
                   />
                   <span className="text-sm">{repoData.language}</span>
                 </div>
@@ -67,14 +66,14 @@ const GitHubCard = () => {
           )}
 
           {/* Stats */}
-          <div className="flex divide-x divide-gray-100 dark:divide-gray-800 border-t border-gray-100 dark:border-gray-800">
+          <div className="flex divide-x divide-current/10 border-t border-current/10">
             <div className="flex-1 px-4 py-3 flex items-center justify-center">
-              <BookMarked className="h-4 w-4 text-gray-400 mr-1.5" />
-              <span className="text-sm text-gray-600 dark:text-gray-300">{repoData.repositories}</span>
+              <BookMarked className="h-4 w-4 mr-1.5" />
+              <span className="text-sm">{repoData.repositories}</span>
             </div>
             <div className="flex-1 px-4 py-3 flex items-center justify-center">
-              <User className="h-4 w-4 text-gray-400 mr-1.5" />
-              <span className="text-sm text-gray-600 dark:text-gray-300">{repoData.members}</span>
+              <User className="h-4 w-4 mr-1.5" />
+              <span className="text-sm">{repoData.members}</span>
             </div>
           </div>
         </div>
