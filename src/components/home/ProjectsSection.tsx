@@ -25,7 +25,7 @@ const GitHubButton: React.FC<{ href: string }> = ({ href }) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 backdrop-blur-sm transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:bg-white/10"
+    className="inline-flex items-center justify-center w-10 h-10 rounded-full gradient-blue-purple transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-md"
     aria-label="View Code on GitHub"
   >
     <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">

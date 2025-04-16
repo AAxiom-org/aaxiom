@@ -138,13 +138,13 @@ export default function HeroSection({ isCareer = false }: HeroSectionProps) {
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <button
                   onClick={() => scrollToSection('ventures')}
-                  className="inline-block px-6 py-3 gradient-blue-purple-hover text-white rounded-lg font-semibold text-base transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-lg"
+                  className="inline-block px-6 py-3 gradient-blue-purple-hover text-white rounded-lg font-semibold text-base transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-lg cursor-pointer"
                 >
                   Explore Ventures
                 </button>
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="inline-block px-6 py-3 bg-transparent border-2 border-current text-current rounded-lg font-semibold text-base transition-all duration-300 ease-in-out hover:bg-current hover:text-white hover:-translate-y-0.5 hover:shadow-lg"
+                  className="inline-block px-6 py-3 bg-transparent border-2 border-current text-current rounded-lg font-semibold text-base transition-all duration-300 ease-in-out cursor-pointer hover:text-primary hover:-translate-y-0.5 hover:shadow-lg"
                 >
                   Get in Touch
                 </button>
